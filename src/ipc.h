@@ -29,6 +29,10 @@ extern "C" {
 
 #define NN_IPC -2
 
+#define NN_IPC_SEC_ATTR 1
+#define NN_IPC_OUTBUFSZ 2
+#define NN_IPC_INBUFSZ 3
+
 #ifdef __cplusplus
 }
 #endif
