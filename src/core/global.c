@@ -1123,9 +1123,15 @@ static void nn_global_submit_statistics ()
         nn_glock_lock ();
         s = self.socks [i];
         if (!s)
+        {
+            nn_glock_unlock ();
             continue;
+        }
         if (i == self.statistics_socket)
+        {
+            nn_glock_unlock ();
             continue;
+        }
         nn_ctx_enter (&s->ctx);
         nn_glock_unlock ();
 
